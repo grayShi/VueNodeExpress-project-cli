@@ -13,7 +13,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "model": "sequelize-auto -h 47.97.115.41 -d blog -u root -x shigaolei -p 3306 -e mysql -C -o \"./server/exportModels/models/\""
+    "model": "sequelize-auto -h xx.xx.xx.xx -d databaseName -u username -x password -p port -e mysql -C -o \"./server/exportModels/models/\""
   },
   "dependencies": {
     "axios": "^0.18.0",
