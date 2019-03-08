@@ -1,0 +1,50 @@
+{
+  "appenders": {
+    "console": {
+      "type": "console"
+    },
+    "project": {
+      "type": "dateFile",
+      "filename": "./server/logs/project/project",
+      "pattern": "-yyyy-MM-dd.log",
+      "compress": false,
+      "alwaysIncludePattern": true,
+      "daysToKeep": 30
+    },
+    "http": {
+      "type": "dateFile",
+      "filename": "./server/logs/access/access",
+      "pattern": "-yyyy-MM-dd.log",
+      "compress": false,
+      "alwaysIncludePattern": true,
+      "daysToKeep": 30
+    },
+    "sql": {
+      "type": "dateFile",
+      "filename": "./server/logs/sql/sql",
+      "pattern": "-yyyy-MM-dd.log",
+      "compress": false,
+      "alwaysIncludePattern": true,
+      "daysToKeep": 30
+    },
+    "exceptionFilter": {
+      "type": "logLevelFilter",
+      "appender": "exception",
+      "level": "error"
+    },
+    "exception": {
+      "type": "dateFile",
+      "filename": "./server/logs/error/error",
+      "pattern": "-yyyy-MM-dd.log",
+      "compress": false,
+      "alwaysIncludePattern": true,
+      "daysToKeep": 30
+    }
+  },
+  "categories": {
+    "default": {"appenders": ["project", "exceptionFilter", "console"], "level": "info"},
+    "http": {"appenders": ["http", "project", "console"], "level": "info"},
+    "sql": {"appenders": ["sql", "project", "console"], "level": "info"},
+    "exception": {"appenders": ["exception", "project", "console"], "level": "error"}
+  }
+}
