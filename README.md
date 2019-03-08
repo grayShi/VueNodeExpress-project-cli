@@ -1,10 +1,12 @@
 # Vue + Node 开发脚手架
 
-![vue]
-![node]
-![express]
-![log4j]
-![sequelize]
+项目搭建模板
+
+[vue]
+[node]
+[express]
+[log4j]
+[sequelize]
 
 
 # 项目结构
@@ -34,7 +36,8 @@
 </pre>
 
 # 功能
-- [x] 前台全局方法，全局组件引入
+- [x] 前台全局方法，全局组件引入，Vue-cli
+- [x] 后台express+node
 - [x] 后台log输出，包括请求开始，结束，持续时间，请求接口
 - [x] sequelize连接数据库
 
