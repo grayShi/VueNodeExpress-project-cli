@@ -1,30 +1,59 @@
-# project-cli
+#Vue + Node 开发脚手架
+![vue]
+![node]
+![express]
+![log4j]
+![sequelize]
 
-> A Vue Node Express Sequelize project
 
-## Build Setup
+# 项目结构
+<pre>
+.
+├── README.md           
+├── package.json        // 构建项目与工具包依赖
+├── src                 // 前台目录
+│   ├── components      // 组件库
+│   │   └── index.js    // 注册为全局组件
+│   ├── mixins       	// 公用方法
+│   │   └── index.js    // 注册为全局方法
+│   └── router        	// vue router 配置
+├── server              // 后台node目录
+│   ├── config      	// log4j配置
+│   ├── exportModels    // sequelize-auto生成model位置
+│   ├── mapping      	// sequelize mapping
+│   ├── model      		// 项目实际使用model(可以和sequelize-auto相同，但是一般需要稍微修改)
+│   │   └── index.js    // 配置数据库连接
+│   ├── monitor      	// 中间件配置(发起请求，记录log)
+│   ├── router      	// express路由
+│   ├── service      	// 后台方法实现
+│   ├── utils      		// 配置文件
+│   │   └── common.js   // 定义标准的后台返回数据格式
+│   ├── index.js      	// 入口文件
 
-``` bash
-# install dependencies
-npm install
+</pre>
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 功能
+- [x] 前台全局方法，全局组件引入
+- [x] 后台log输出，包括请求开始，结束，持续时间，请求接口
+- [x] sequelize连接数据库
 
-# build for production with minification
-npm run build
+# 构建项目
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+ 1. 将项目 clone 到本地
+    ```
+    git clone git@github.com:grayShi/project-cli.git
+    ```
+ 2. 安装依赖的包
+    ```
+    npm install
+    ```
+ 3. 修改package.json
+    ```
+    将scripts下的model修改成目标数据库
+	npm run model
+    ```
+ 4. 启动
+	```
+    npm run dev
+	npm run server
+    ```
