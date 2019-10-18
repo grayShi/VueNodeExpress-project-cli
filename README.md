@@ -21,7 +21,7 @@
 │   │   └── index.js    // 注册为全局方法
 │   └── router        	// vue router 配置
 ├── server              // 后台node目录
-│   ├── config      	// log4j配置
+│   ├── config      	// log4js配置
 │   ├── exportModels    // sequelize-auto生成model位置
 │   ├── mapping      	// sequelize mapping
 │   ├── model      		// 项目实际使用model(可以和sequelize-auto相同，但是一般需要稍微修改)
